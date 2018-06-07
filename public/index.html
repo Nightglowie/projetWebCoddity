@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <link href="https://fonts.googleapis.com/css?family=Carme" rel="stylesheet">
+        <title data-react-helmet="true">
+        </title>
+        <script type="text/JavaScript">
+            var picCount=0; // global
+            var picArray= ["url(friends-background.jpeg)", "url(beHappy-background.jpeg)", "url(beer-background.jpg)"]
+            function nextPic()
+            { 
+                picCount=(picCount+1<picArray.length)? picCount+1 : 0;
+                document.getElementById("background").style.backgroundImage = picArray[picCount];
+                setTimeout('nextPic()',5000)
+            }
+
+        </script>
+        <script src="/socket.io/socket.io.js">
+        </script>
+    </head>
+    <body onload="setTimeout('nextPic()',0)">
+        <div id="btn-menuBurger">
+            <div class="barre"></div>
+            <div class="barre"></div>
+            <div class="barre"></div>
+        </div>
+        <div id="menuBurger">
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">Gallerie</a>
+                </li>
+                 <li>
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div  class="body" id="___gatsby">
+        </div>
+        <script src="/commons.js">
+        </script>
+        <script src= //code.jquery.com/jquery-1.11.3.js></script>
+        <script type="text/javascript" language="JavaScript" src="app.js"></script>
+    </body>
+</html>
