@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Carme');
+
 html {
   font-family: 'Carme', sans-serif;
   -ms-text-size-adjust: 100%;
@@ -691,14 +693,31 @@ pre tt:after {
 
 #menuBurger.isOpen{
   -webkit-transform: translateX(0%);
+  -webkit-transition: transform .6s ease-in-out;
 }
 
-.body{
+
+#biggestDiv{
   -webkit-transform: translateX(0%);
   -webkit-transition: transform .6s ease-in-out;
 }
 
-.body.isOpen{
+#biggestDiv.isOpen{
   -webkit-transform: translateX(-20%);
   -webkit-transition: transform .6s ease-in-out;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.slide {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
 }
